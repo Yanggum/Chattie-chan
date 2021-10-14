@@ -1,0 +1,33 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/script.rpy", line 30, in script
+    t "[response.text]"
+AttributeError: 'NoneType' object has no attribute 'text'
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "game/script.rpy", line 30, in script
+    t "[response.text]"
+  File "/Applications/renpy-7.4.9-sdk/renpy/ast.py", line 721, in execute
+    renpy.exports.say(who, what, *args, **kwargs)
+  File "/Applications/renpy-7.4.9-sdk/renpy/exports.py", line 1417, in say
+    who(what, *args, **kwargs)
+  File "/Applications/renpy-7.4.9-sdk/renpy/character.py", line 1222, in __call__
+    what = self.prefix_suffix("what", self.what_prefix, what, self.what_suffix)
+  File "/Applications/renpy-7.4.9-sdk/renpy/character.py", line 1141, in prefix_suffix
+    return (sub(prefix) + sub(body) + sub(suffix))
+  File "/Applications/renpy-7.4.9-sdk/renpy/character.py", line 1121, in sub
+    return renpy.substitutions.substitute(s, scope=scope, force=force, translate=translate)[0]
+  File "/Applications/renpy-7.4.9-sdk/renpy/substitutions.py", line 270, in substitute
+    s = formatter.vformat(s, (), kwargs)
+  File "/home/tom/ab/renpy-build/tmp/install.linux-x86_64/lib/python2.7/string.py", line 563, in vformat
+  File "/home/tom/ab/renpy-build/tmp/install.linux-x86_64/lib/python2.7/string.py", line 585, in _vformat
+  File "/home/tom/ab/renpy-build/tmp/install.linux-x86_64/lib/python2.7/string.py", line 652, in get_field
+AttributeError: 'NoneType' object has no attribute 'text'
+
+Darwin-20.6.0-x86_64-i386-64bit
+Ren'Py 7.4.9.2142
+tia 1.0
+Thu Oct 14 21:32:15 2021
